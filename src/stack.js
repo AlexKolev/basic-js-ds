@@ -33,7 +33,6 @@ class Stack {
 			newElement.prev = this.currentElement;
 			this.currentElement = newElement;
 		}
-
 	}
 
 	pop() {
