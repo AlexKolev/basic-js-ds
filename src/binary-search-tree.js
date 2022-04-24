@@ -147,7 +147,8 @@ class BinarySearchTree {
 			this.rootMain.right = null;
 			return;
 		} else {
-			this.removeNode(this.rootMain, data);
+			//надо и корень обновлять
+			this.rootMain = this.removeNode(this.rootMain, data);
 			return;
 		}
 	}
@@ -190,20 +191,28 @@ module.exports = {
 const tree = new BinarySearchTree();
 
 tree.add(9);
-tree.add(14);
-tree.add(54);
-tree.add(2);
+console.log(tree);
 tree.add(6);
-tree.add(8);
-tree.add(31);
-tree.add(1);
-tree.remove(36);
-tree.remove(6);
-tree.remove(2);
-tree.root().data;// => 1;
-//console.log(tree.root().data);
-tree.has(5); //=> trye
-tree.has(6); //=> false
+console.log(tree);
+
+tree.remove(9);
+console.log(tree);
+
+// tree.add(9);
+// tree.add(14);
+// tree.add(54);
+// tree.add(2);
+// tree.add(6);
+// tree.add(8);
+// tree.add(31);
+// tree.add(1);
+// tree.remove(36);
+// tree.remove(6);
+// tree.remove(2);
+// tree.root().data;// => 1;
+// //console.log(tree.root().data);
+// tree.has(5); //=> trye
+// tree.has(6); //=> false
 // console.log(tree.has(5));
 // console.log(tree.has(6));
 // console.log(tree.find(3));
